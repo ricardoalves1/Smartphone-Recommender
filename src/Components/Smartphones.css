@@ -21,3 +21,11 @@
 .header button:hover {
     background-color: grey;
 }
+
+.input:nth-child(n){
+    margin: 10px;
+}
+
+.button {
+    margin-top: 20px !important;
+}
