@@ -1,0 +1,23 @@
+.root {
+    max-width: 400px;
+    flex-grow: 1;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+.header {
+    display: 'flex';
+    align-items: 'center';
+    padding-top: 20px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.671) !important;
+    color: white !important;
+}
+
+.header button {
+    color: white;
+}
+
+.header button:hover {
+    background-color: grey;
+}
