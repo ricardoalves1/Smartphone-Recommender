@@ -14,7 +14,7 @@ export default class Smartphone extends React.Component {
             <div>
               <Card>
                 <CardContent className="image">
-                    <img src={this.props.image} loading="lazy"/>
+                    <img src={this.props.image}/>
                 </CardContent>
               </Card>
               
