@@ -1,10 +1,8 @@
 import React from 'react';
 import Smartphone from './Smartphone';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
@@ -67,12 +65,12 @@ export default class Smartphones extends React.Component {
                         nextButton={
                             <Button size="small" onClick={this.handleNext} disabled={this.state.activeStep === this.state.maxSteps - 1}>
                                 Next
-                                {this.theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                                {this.theme.direction === 'rtl' ? '<' : '>'}
                             </Button>
                         }
                         backButton={
                             <Button size="small" onClick={this.handleBack} disabled={this.state.activeStep === 0}>
-                                {this.theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                                {this.theme.direction === 'rtl' ? '>' : '<'}
                                 Back
                             </Button>
                         }
