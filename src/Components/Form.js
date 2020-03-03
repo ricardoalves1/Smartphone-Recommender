@@ -28,8 +28,6 @@ export default class Form extends React.Component {
     componentDidMount() {
       axios.get("https://smartphone-recommender-api.herokuapp.com/info")
         .then(res => {
-          console.log(res.data)
-
           let min = res.data.batteries[0] - res.data.batteries[0] % 500
           let max = res.data.batteries[res.data.batteries.length -1]
           let batteries = []
@@ -51,7 +49,7 @@ export default class Form extends React.Component {
     }
 
     render() {
-      let aux, acc;
+      let load, acc;
 
       if(this.state.accuracy != 0){
         acc = <p>Precisão: {this.state.accuracy*100}%</p>
@@ -60,9 +58,9 @@ export default class Form extends React.Component {
       }
 
       if(this.state.isLoading) {
-        aux = <img src='loading.gif'/>;
+        load = <img src='loading.gif'/>;
       } else {
-        aux = <Smartphones phones={this.state.phones}/>
+        load = <Smartphones phones={this.state.phones}/>
       }
 
       
@@ -147,9 +145,9 @@ export default class Form extends React.Component {
           </form>
           <p>{this.state.erro}</p>
 
-          {this.state.brand}
+          {this.state.phones.length > 0 ? this.state.brand : null}
           {acc}
-          {aux}
+          {load}
         </div>
       );
     }

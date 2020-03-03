@@ -21,9 +21,5 @@ export default class Smartphone extends React.Component {
             </div>
           )
     }
-
-    handleClickOpen(e) {
-        console.log(e);
-    }
   
 }
